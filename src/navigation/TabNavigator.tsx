@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AccueilScreen from '../screens/AccueilScreen';
 import StackNavigator from './StackNavigator'; // Utilisation du Stack
 import { Ionicons } from '@expo/vector-icons';
+import CardScreen from "../screens/CardScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -19,6 +20,11 @@ const TabNavigator = () => {
                 component={StackNavigator}  // ✅ Utilisation du StackNavigator
                 options={{ tabBarIcon: ({ color, size }) => <Ionicons name="cart" size={size} color={color} /> }}
             />
+            <Tab.Screen
+                name="Carte"
+                component={CardScreen}
+                options={{ tabBarIcon: ({ color, size }) => <Ionicons name="card" size={size} color={color} /> }}
+                />
         </Tab.Navigator>
     );
 };

@@ -8,3 +8,5 @@ export type RootStackParamList = {
 };
 
 export type DetailsProduitScreenRouteProp = RouteProp<RootStackParamList, 'DetailsProduit'>;
+
+
